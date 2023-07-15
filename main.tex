@@ -1,0 +1,57 @@
+\documentclass[12pt, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage[top=0.50in, bottom=0.50in, left=1.0in, right=0.75in, includeheadfoot]{geometry}
+\usepackage{recipes}
+\usepackage{subfiles} % Best loaded last in the preamble
+\usepackage{textcomp} % to use (c) and (tm)
+
+\title{Salmon Cookbook}
+\date{Created April 2020}
+
+\begin{document}
+
+% \maketitle
+% \thispagestyle{empty}
+% \newpage
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{4cm}
+            
+        \Huge
+        \sffamily{
+            \textbf{Okay, but how much do I use}
+        }
+        
+        \vspace{1cm}
+        \Large
+        An attempt to quantify approximate recipes
+            
+        \vfill
+        \Large
+        Created April 2020
+            
+    \end{center}
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\rhead{\thepage}
+
+\cookbooksection{Breakfasts}
+\subfile{sections/breakfasts}
+
+\cookbooksection{Sides}
+\subfile{sections/sides}
+
+\cookbooksection{Dinners}
+\subfile{sections/dinners}
+
+\cookbooksection{Desserts}
+\subfile{sections/desserts}
+
+\end{document}

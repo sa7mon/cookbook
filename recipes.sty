@@ -1,0 +1,57 @@
+\usepackage{fancyhdr}
+\usepackage{tabularx}              % For page-width tabular's
+\usepackage{titlesec}   % Needed to change the spacing after section
+\usepackage{units}
+
+%%%%%%%%%%%%%%%%%
+%
+%   Title Formatting
+%
+%%%%%%%%%%%%%%%%%
+\titlespacing*{\section} {0pt}{0pt}{20pt} % third param is space after section
+\titleformat{\section}[block]{\sffamily\Large\bfseries\filcenter}{\thesection}{1em}{}
+
+%%%%%%%%%%%%%%%%%
+%
+%   Commands
+%
+%%%%%%%%%%%%%%%%%
+\newcommand{\temp}[1]{%
+    $#1^\circ$F
+}
+
+\newcommand{\recipe}[1]{
+    \newpage\lhead{}\chead{}\rhead{\thepage}\lfoot{}\cfoot{}\rfoot{}\section*{#1}
+    \addcontentsline{toc}{subsection}{#1}
+}
+
+\newcommand{\category}[1]{%
+    \chead{#1}
+}
+    
+\newcommand{\servingstimes}[3]{
+    \begin{tabularx}{\textwidth}{X X X}  % X command makes column take remaining horizontal space
+      \textbf{Servings}: #1 & \textbf{Prep Time}: #2 & \textbf{Cook Time}: #3
+    \end{tabularx}
+}
+
+\newcommand{\cookbooksection}[1]{
+    \newpage
+    \hspace{0pt}
+    \vfill
+    \chead{}
+    \section*{\huge #1}
+    \addcontentsline{toc}{section}{#1}
+    \vfill
+    \hspace{0pt}
+    \pagebreak
+}
+
+\newcommand{\ingredients}{\subsection*{Ingredients}}
+
+\newcommand{\instructions}{\subsection*{Instructions}\vspace{10pt}}
+    
+% \renewcommand{\footrulewidth}{1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
